@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+	<string level=""  name="err_failed_change_logpath">ログ出力先の更新に失敗しました。</string>
+	<string level=""  name="err_failed_SelectTimeUploads">Fail to Load TimeUploads</string>
+	<string level=""  name="err_failed_InsertTimeUpload">Fail to Add TimeUploads</string>
+	<string level=""  name="err_failed_DeleteTimeUpload">Fail to Delete TimeUploads</string>
+	
+	<string level=""  name="err_value_is_not_entered">{0}を入力してください。</string>
+	<string level=""  name="err_value_is_not_selected">{0}を選択してください。</string>
+	<string level=""  name="err_google_login_fail">Login fail!</string>	
+
+	<string level=""  name="confirm_delTimeUpload">{0}を削除します。&#10;よろしいでしょうか？</string>
+	<string level=""  name="confirm_RunUploadManual">押すと即時で増加ファイルをコピーする。&#10;よろしいでしょうか？</string>
+	<string level=""  name="confirm_CloseConfigForm">よろしいでしょうか？</string>
+
+	<string level=""  name="info_update_option_setting">オプション設定を更新しました。</string>
+
+	<string level=""  name="info_execute_upload_begin">【{0}】	実行LOG_BEGIN。。。</string>
+	<string level=""  name="info_execute_upload_end"  >【{0}】	実行LOG_END。</string>
+</resources>

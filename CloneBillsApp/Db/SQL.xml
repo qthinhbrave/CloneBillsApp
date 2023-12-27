@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap namespace="SQL"
+        xmlns="http://ibatis.apache.org/mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <statements>
+
+	  <select id="SelectOptions" resultClass="String">
+		  SELECT
+		  KEY_1,
+		  KEY_2,
+		  Value_1,
+		  Value_2,
+		  Value_3,
+		  REMARK
+		  FROM MST_OPTION
+	  </select>
+
+	  <select id="SelectOption" resultClass="String">
+		  SELECT
+		  KEY_1,
+		  KEY_2,
+		  Value_1,
+		  Value_2,
+		  Value_3,
+		  REMARK
+		  FROM MST_OPTION
+		  WHERE
+		  KEY_1 = #KEY_1# AND
+		  KEY_2 = #KEY_2#
+	  </select>
+
+	  <update id="UpdateOption">
+		  UPDATE MST_OPTION SET
+		  Value_1 = #Value_1#,
+		  Value_2 = #Value_2#,
+		  Value_3 = #Value_3#,
+		  UPDATE_DT = DATETIME(CURRENT_TIMESTAMP,'localtime')
+		  WHERE
+		  KEY_1 = #KEY_1# AND
+		  KEY_2 = #KEY_2#
+	  </update>
+
+	  <select id="SelectTimeUploads" resultClass="String">
+		  SELECT
+		  TIME_ID,
+		  TIME_VALUE
+		  FROM MST_TIME_UPLOAD
+		  WHERE
+		  DELETE_DT IS NULL
+		  ORDER BY
+		  TIME_VALUE
+	  </select>
+
+	  <insert id="InsertTimeUpload">
+		  INSERT INTO MST_TIME_UPLOAD(
+		  TIME_VALUE
+		  ) VALUES(
+		  #TIME_VALUE#
+		  )
+	  </insert>
+
+	  <delete id="DeleteTimeUpload">
+		  UPDATE
+		  MST_TIME_UPLOAD
+		  SET DELETE_DT = DATETIME(CURRENT_TIMESTAMP,'localtime')
+		  WHERE
+		  TIME_ID = #TIME_ID#
+	  </delete>
+
+	  <select id="SelectHistoryUpload">
+		  SELECT [HISTORY_ID]
+		  ,[RECORD_DT]
+		  ,[FROM_LOCATION]
+		  ,[TO_LOCATION]
+		  ,[NUMBER_UPLOADED]
+		  ,[INTERVAL_SEC]
+		  FROM [HISTORY_UPLOAD]
+		  ORDER BY [RECORD_DT] DESC
+	  </select>
+
+	  <select id="SelectHistoryUploadLastId" resultClass ="String">
+		  SELECT
+		  [HISTORY_ID]
+		  ,[RECORD_DT]
+		  ,[FROM_LOCATION]
+		  ,[TO_LOCATION]
+		  FROM HISTORY_UPLOAD
+		  WHERE
+		  ROWID = last_insert_rowid()
+	  </select>
+	  
+	  <insert id="InsertHistoryUpload">
+		  INSERT INTO [HISTORY_UPLOAD]
+		  ([RECORD_DT]
+		  ,[FROM_LOCATION]
+		  ,[TO_LOCATION]
+		  ) VALUES(
+		  DATETIME(CURRENT_TIMESTAMP,'localtime')
+		  ,#FROM_LOCATION#
+		  ,#TO_LOCATION#
+		  )
+	  </insert>
+
+	  <update id="UpdateHistoryUpload">
+		  UPDATE [HISTORY_UPLOAD] SET
+		  NUMBER_UPLOADED = #NUMBER_UPLOADED#,
+		  INTERVAL_SEC = #INTERVAL_SEC#
+		  WHERE
+		  HISTORY_ID = #HISTORY_ID#
+	  </update>
+
+	  <insert id="InsertDetailUpload">
+		  INSERT INTO [DETAIL_UPLOAD]
+		  ([HISTORY_ID]
+		  ,[FILE_NAME]
+		  ,[PATH]
+		  ,[SIZE]
+		  ,[RESULT]
+		  ,[REMARK]
+		  ) VALUES(
+		  #HISTORY_ID#
+		  ,#FILE_NAME#
+		  ,#PATH#
+		  ,#SIZE#
+		  ,#RESULT#
+		  ,#REMARK#
+		  )
+	  </insert>
+	  
+  </statements>
+</sqlMap>
