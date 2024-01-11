@@ -10,7 +10,7 @@ namespace CloneBillsApp.Class.AppData
 {
     public class clsLocalDestinationInfo :  clsOptionKeyBase
     {
-        public bool IsActive { get; private set; }
+        public bool IsActive { get;  set; }
         public string Path { get; private set; }
 
         public clsLocalDestinationInfo()

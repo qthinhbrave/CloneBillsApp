@@ -128,7 +128,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(105, 36);
             this.button3.TabIndex = 6;
-            this.button3.Text = "【F5】Config";
+            this.button3.Text = "【F5】設定";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.btnConfig_Click);
             // 
@@ -143,7 +143,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Source";
+            this.label1.Text = "コピー元のフォルダ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -157,7 +157,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 40);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Destination";
+            this.label2.Text = "コピー先のフォルダ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -183,7 +183,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 120);
             this.label6.TabIndex = 2;
-            this.label6.Text = "アップロード\r\n時間設定";
+            this.label6.Text = "実行時間\r\n設定";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbxTimeUpload

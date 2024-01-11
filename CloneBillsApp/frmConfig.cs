@@ -182,17 +182,30 @@ namespace CloneBillsApp
                 clsGoogleInfo.ClientId != txtClientID.Text ||
                 clsGoogleInfo.ClientSecret != rtbJsonKey.Text)
             {
-                clsGoogleApiSevice _api = new clsGoogleApiSevice(txtClientID.Text, txtClientSecret.Text);
-                // Ckeck authen
-                await _api.LoginAsync();
-                if (_api.CheckLogin())
+                if (!radioButton2.Checked)
                 {
+                    // only save to DB
                     if (clsGoogleInfo.Save(radioButton2.Checked, txtClientID.Text, txtClientSecret.Text))
                     {
                         IsUpdateInfo = true;
                     }
                     else
                     { ok = false; }
+                }
+                else
+                {
+                    clsGoogleApiSevice _api = new clsGoogleApiSevice(txtClientID.Text, txtClientSecret.Text);
+                    // Ckeck authen
+                    await _api.LoginAsync();
+                    if (_api.CheckLogin())
+                    {
+                        if (clsGoogleInfo.Save(radioButton2.Checked, txtClientID.Text, txtClientSecret.Text))
+                        {
+                            IsUpdateInfo = true;
+                        }
+                        else
+                        { ok = false; }
+                    }
                 }
             }
             if (ok)

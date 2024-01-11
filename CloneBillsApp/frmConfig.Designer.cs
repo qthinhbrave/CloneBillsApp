@@ -60,13 +60,13 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 8;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Controls.Add(this.browseJsonKey, 3, 7);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 3);
@@ -95,7 +95,7 @@
             // 
             // browseJsonKey
             // 
-            this.browseJsonKey.Location = new System.Drawing.Point(303, 283);
+            this.browseJsonKey.Location = new System.Drawing.Point(313, 283);
             this.browseJsonKey.Name = "browseJsonKey";
             this.browseJsonKey.Size = new System.Drawing.Size(35, 23);
             this.browseJsonKey.TabIndex = 12;
@@ -110,9 +110,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtClientID);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(183, 203);
+            this.panel1.Location = new System.Drawing.Point(193, 203);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(544, 34);
+            this.panel1.Size = new System.Drawing.Size(554, 34);
             this.panel1.TabIndex = 17;
             // 
             // label2
@@ -120,17 +120,17 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Client ID:";
+            this.label2.Text = "クライアントID:";
             // 
             // txtClientID
             // 
             this.txtClientID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtClientID.Location = new System.Drawing.Point(81, 6);
+            this.txtClientID.Location = new System.Drawing.Point(120, 6);
             this.txtClientID.Name = "txtClientID";
             this.txtClientID.ReadOnly = true;
-            this.txtClientID.Size = new System.Drawing.Size(456, 20);
+            this.txtClientID.Size = new System.Drawing.Size(417, 20);
             this.txtClientID.TabIndex = 10;
             // 
             // label1
@@ -143,9 +143,9 @@
             this.label1.Location = new System.Drawing.Point(63, 123);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 34);
+            this.label1.Size = new System.Drawing.Size(124, 34);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Source";
+            this.label1.Text = "コピー元のフォルダ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -154,9 +154,9 @@
             this.panel2.Controls.Add(this.browseSource);
             this.panel2.Controls.Add(this.txtSourcePath);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(183, 123);
+            this.panel2.Location = new System.Drawing.Point(193, 123);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(544, 34);
+            this.panel2.Size = new System.Drawing.Size(554, 34);
             this.panel2.TabIndex = 14;
             // 
             // browseSource
@@ -183,9 +183,9 @@
             this.panel3.Controls.Add(this.browseDestination);
             this.panel3.Controls.Add(this.txtLocalPath);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(183, 163);
+            this.panel3.Location = new System.Drawing.Point(193, 163);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(544, 34);
+            this.panel3.Size = new System.Drawing.Size(554, 34);
             this.panel3.TabIndex = 15;
             // 
             // browseDestination
@@ -222,7 +222,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnSave.Location = new System.Drawing.Point(183, 63);
+            this.btnSave.Location = new System.Drawing.Point(193, 63);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 34);
             this.btnSave.TabIndex = 1;
@@ -241,10 +241,10 @@
             this.radioButton1.ForeColor = System.Drawing.SystemColors.Window;
             this.radioButton1.Location = new System.Drawing.Point(63, 163);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(114, 34);
+            this.radioButton1.Size = new System.Drawing.Size(124, 34);
             this.radioButton1.TabIndex = 18;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Shared folder";
+            this.radioButton1.Text = "コピー先のフォルダ";
             this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -258,10 +258,10 @@
             this.radioButton2.ForeColor = System.Drawing.SystemColors.Window;
             this.radioButton2.Location = new System.Drawing.Point(63, 203);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(114, 34);
+            this.radioButton2.Size = new System.Drawing.Size(124, 34);
             this.radioButton2.TabIndex = 19;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Google drive";
+            this.radioButton2.Text = "Googleドライブ";
             this.radioButton2.UseVisualStyleBackColor = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
@@ -271,9 +271,9 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.txtClientSecret);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(183, 243);
+            this.panel4.Location = new System.Drawing.Point(193, 243);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(544, 34);
+            this.panel4.Size = new System.Drawing.Size(554, 34);
             this.panel4.TabIndex = 20;
             // 
             // label3
@@ -281,22 +281,22 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.Size = new System.Drawing.Size(113, 13);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Client Secret:";
+            this.label3.Text = "クライアントシークレット:";
             // 
             // txtClientSecret
             // 
             this.txtClientSecret.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtClientSecret.Location = new System.Drawing.Point(81, 8);
+            this.txtClientSecret.Location = new System.Drawing.Point(120, 8);
             this.txtClientSecret.Name = "txtClientSecret";
             this.txtClientSecret.ReadOnly = true;
-            this.txtClientSecret.Size = new System.Drawing.Size(456, 20);
+            this.txtClientSecret.Size = new System.Drawing.Size(417, 20);
             this.txtClientSecret.TabIndex = 11;
             // 
             // rtbJsonKey
             // 
-            this.rtbJsonKey.Location = new System.Drawing.Point(183, 283);
+            this.rtbJsonKey.Location = new System.Drawing.Point(193, 283);
             this.rtbJsonKey.Name = "rtbJsonKey";
             this.rtbJsonKey.Size = new System.Drawing.Size(114, 34);
             this.rtbJsonKey.TabIndex = 0;
@@ -317,7 +317,7 @@
             this.MaximizeBox = false;
             this.Name = "frmConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Configuation";
+            this.Text = "設定";
             this.Load += new System.EventHandler(this.frmConfig_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

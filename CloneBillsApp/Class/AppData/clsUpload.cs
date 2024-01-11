@@ -33,6 +33,8 @@ namespace CloneBillsApp.Class.AppData
 
             // Marking the start time 
             DateTime start = DateTime.Now;
+            //localInfo.IsActive = false;
+            //googleInfo.IsActive = false;
 
             if (localInfo.IsActive)
             {
@@ -41,6 +43,10 @@ namespace CloneBillsApp.Class.AppData
             else if (googleInfo.IsActive)
             {
                 toLocation = googleInfo.ToString();
+            }
+            else
+            {
+                toLocation = "BOX";
             }
 
             try
@@ -53,6 +59,7 @@ namespace CloneBillsApp.Class.AppData
 
                     // EXECUTE UPLOAD
                     clsCommon.DirectorySearch(fromLocation, ref files);
+                    clsBoxApiService obj = new clsBoxApiService();
                     foreach (string file in files)
                     {
                         if (localInfo.IsActive)
@@ -84,6 +91,10 @@ namespace CloneBillsApp.Class.AppData
                                 }
                             }
                         }
+                        //else
+                        //{
+                        //    TaskList.Add(obj.BOX_Upload(file));
+                        //}
                     }
                     Task.WaitAll(TaskList.ToArray());
                 }

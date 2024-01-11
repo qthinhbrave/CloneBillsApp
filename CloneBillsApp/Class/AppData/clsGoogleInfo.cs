@@ -10,7 +10,7 @@ namespace CloneBillsApp.Class.AppData
 {
     public class clsGoogleInfo : clsOptionKeyBase
     {
-        public bool IsActive { get; private set; }
+        public bool IsActive { get;  set; }
         public string ClientId { get; private set; }
         public string ClientSecret { get; private set; }
         public clsGoogleInfo()

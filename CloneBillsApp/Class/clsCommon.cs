@@ -165,7 +165,6 @@ namespace CloneBillsApp.Class
                 }
                 foreach (string d in Directory.GetDirectories(dir))
                 {
-                    Console.WriteLine(Path.GetFileName(d));
                     DirectorySearch(d, ref files);
                 }
             }

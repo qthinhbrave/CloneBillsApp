@@ -259,12 +259,12 @@ namespace CloneBillsApp.Class.AppData
                 String query = null;
                 if (googleFolderIdParent == null)
                 {
-                    query = " mimeType = 'application/vnd.google-apps.folder' " //
+                    query = " mimeType = 'application/vnd.google-apps.folder' and trashed=false " //
                             + " and 'root' in parents";
                 }
                 else
                 {
-                    query = " mimeType = 'application/vnd.google-apps.folder' " //
+                    query = " mimeType = 'application/vnd.google-apps.folder' and trashed=false " //
                             + " and '" + googleFolderIdParent + "' in parents";
                 }
 
