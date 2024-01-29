@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneBillsApp", "CloneBillsApp\CloneBillsApp.csproj", "{DBBEBC42-DFA0-40AD-AEA0-0E834148FF84}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CloneBillsAppSetup", "CloneBillsAppSetup\CloneBillsAppSetup.vdproj", "{D4CDDC53-8E25-4610-A50C-C7C5D9893489}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{DBBEBC42-DFA0-40AD-AEA0-0E834148FF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBBEBC42-DFA0-40AD-AEA0-0E834148FF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBBEBC42-DFA0-40AD-AEA0-0E834148FF84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4CDDC53-8E25-4610-A50C-C7C5D9893489}.Debug|Any CPU.ActiveCfg = Debug
+		{D4CDDC53-8E25-4610-A50C-C7C5D9893489}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

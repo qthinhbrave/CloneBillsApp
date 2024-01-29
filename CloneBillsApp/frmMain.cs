@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using CloneBillsApp.Class;
 using CloneBillsApp.Class.AppData;
@@ -21,7 +23,7 @@ namespace CloneBillsApp
         private clsLocalDestinationInfo localInfo;
         private clsGoogleInfo googleInfo;
         private clsGoogleApiSevice _api;
-        
+
         public frmMain()
         {
             InitializeComponent();
@@ -153,6 +155,8 @@ namespace CloneBillsApp
             {
                 // reload TimeUpload list
                 LoadTimeUpload();
+                cbbHours.SelectedIndex = -1;
+                cbbMinutes.SelectedIndex = -1;
             }
         }
 
@@ -230,12 +234,9 @@ namespace CloneBillsApp
             {
                 clsOptionSetting.Load();
                 LoadUploadPath();
+                // reload TimeUpload list
+                LoadTimeUpload();
             }
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void LoadTimeUpload()

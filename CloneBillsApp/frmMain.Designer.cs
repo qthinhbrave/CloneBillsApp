@@ -31,19 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnF3 = new System.Windows.Forms.Button();
-            this.btnF4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lbxTimeUpload = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtSourcePath = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtDestinationInfo = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbxTimeUpload = new System.Windows.Forms.ListBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnF4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnF3 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@
             this.mnuItemClose = new System.Windows.Forms.ToolStripMenuItem();
             this.myBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,63 +74,30 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Controls.Add(this.btnF3, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnF4, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.button3, 3, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.listBox2, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnF4, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnF3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 5, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1264, 729);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(844, 521);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // btnF3
-            // 
-            this.btnF3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnF3.Location = new System.Drawing.Point(63, 130);
-            this.btnF3.Name = "btnF3";
-            this.btnF3.Size = new System.Drawing.Size(105, 36);
-            this.btnF3.TabIndex = 4;
-            this.btnF3.Text = "【F3】非表示";
-            this.btnF3.UseVisualStyleBackColor = true;
-            this.btnF3.Click += new System.EventHandler(this.btnF3_Click);
-            // 
-            // btnF4
-            // 
-            this.btnF4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnF4.Location = new System.Drawing.Point(183, 130);
-            this.btnF4.Name = "btnF4";
-            this.btnF4.Size = new System.Drawing.Size(105, 36);
-            this.btnF4.TabIndex = 5;
-            this.btnF4.Text = "【F4】手動送信";
-            this.btnF4.UseVisualStyleBackColor = true;
-            this.btnF4.Click += new System.EventHandler(this.btnF4_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.button3.Location = new System.Drawing.Point(303, 130);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 36);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "【F5】設定";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.btnConfig_Click);
             // 
             // label1
             // 
@@ -139,11 +106,11 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(63, 180);
+            this.label1.Location = new System.Drawing.Point(63, 165);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 40);
             this.label1.TabIndex = 0;
-            this.label1.Text = "コピー元のフォルダ";
+            this.label1.Text = "控え保存フォルダ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -153,71 +120,31 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(63, 220);
+            this.label2.Location = new System.Drawing.Point(63, 205);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 40);
             this.label2.TabIndex = 2;
-            this.label2.Text = "コピー先のフォルダ";
+            this.label2.Text = "アップロード先";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.lbxTimeUpload);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(423, 60);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 0);
-            this.panel1.Name = "panel1";
-            this.tableLayoutPanel1.SetRowSpan(this.panel1, 3);
-            this.panel1.Size = new System.Drawing.Size(538, 120);
-            this.panel1.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(339, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 120);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "実行時間\r\n設定";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbxTimeUpload
-            // 
-            this.lbxTimeUpload.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbxTimeUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbxTimeUpload.FormattingEnabled = true;
-            this.lbxTimeUpload.IntegralHeight = false;
-            this.lbxTimeUpload.ItemHeight = 25;
-            this.lbxTimeUpload.Location = new System.Drawing.Point(428, 0);
-            this.lbxTimeUpload.Margin = new System.Windows.Forms.Padding(0);
-            this.lbxTimeUpload.Name = "lbxTimeUpload";
-            this.lbxTimeUpload.Size = new System.Drawing.Size(110, 120);
-            this.lbxTimeUpload.TabIndex = 1;
-            this.lbxTimeUpload.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // listBox2
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.listBox2, 6);
             this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(63, 263);
+            this.listBox2.Location = new System.Drawing.Point(63, 248);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(1138, 463);
+            this.listBox2.Size = new System.Drawing.Size(718, 270);
             this.listBox2.TabIndex = 9;
             // 
             // panel2
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panel2, 3);
+            this.tableLayoutPanel1.SetColumnSpan(this.panel2, 5);
             this.panel2.Controls.Add(this.txtSourcePath);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(183, 183);
+            this.panel2.Location = new System.Drawing.Point(183, 168);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(778, 34);
+            this.panel2.Size = new System.Drawing.Size(598, 34);
             this.panel2.TabIndex = 1;
             // 
             // txtSourcePath
@@ -229,17 +156,17 @@
             this.txtSourcePath.Location = new System.Drawing.Point(3, 7);
             this.txtSourcePath.Name = "txtSourcePath";
             this.txtSourcePath.ReadOnly = true;
-            this.txtSourcePath.Size = new System.Drawing.Size(649, 23);
+            this.txtSourcePath.Size = new System.Drawing.Size(592, 23);
             this.txtSourcePath.TabIndex = 0;
             // 
             // panel3
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panel3, 3);
+            this.tableLayoutPanel1.SetColumnSpan(this.panel3, 5);
             this.panel3.Controls.Add(this.txtDestinationInfo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(183, 223);
+            this.panel3.Location = new System.Drawing.Point(183, 208);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(778, 34);
+            this.panel3.Size = new System.Drawing.Size(598, 34);
             this.panel3.TabIndex = 3;
             // 
             // txtDestinationInfo
@@ -248,8 +175,86 @@
             this.txtDestinationInfo.Location = new System.Drawing.Point(3, 7);
             this.txtDestinationInfo.Name = "txtDestinationInfo";
             this.txtDestinationInfo.ReadOnly = true;
-            this.txtDestinationInfo.Size = new System.Drawing.Size(649, 23);
+            this.txtDestinationInfo.Size = new System.Drawing.Size(592, 23);
             this.txtDestinationInfo.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panel1, 2);
+            this.panel1.Controls.Add(this.lbxTimeUpload);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(303, 30);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 0, 20, 4);
+            this.panel1.Name = "panel1";
+            this.tableLayoutPanel1.SetRowSpan(this.panel1, 3);
+            this.panel1.Size = new System.Drawing.Size(221, 131);
+            this.panel1.TabIndex = 7;
+            // 
+            // lbxTimeUpload
+            // 
+            this.lbxTimeUpload.ColumnWidth = 85;
+            this.lbxTimeUpload.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbxTimeUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbxTimeUpload.FormattingEnabled = true;
+            this.lbxTimeUpload.IntegralHeight = false;
+            this.lbxTimeUpload.ItemHeight = 25;
+            this.lbxTimeUpload.Location = new System.Drawing.Point(89, 0);
+            this.lbxTimeUpload.Margin = new System.Windows.Forms.Padding(0);
+            this.lbxTimeUpload.MultiColumn = true;
+            this.lbxTimeUpload.Name = "lbxTimeUpload";
+            this.lbxTimeUpload.Size = new System.Drawing.Size(132, 131);
+            this.lbxTimeUpload.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.ForeColor = System.Drawing.SystemColors.Window;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 131);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "実行時間\r\n設定";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnF4
+            // 
+            this.btnF4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnF4.Location = new System.Drawing.Point(63, 80);
+            this.btnF4.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnF4.Name = "btnF4";
+            this.btnF4.Size = new System.Drawing.Size(114, 36);
+            this.btnF4.TabIndex = 5;
+            this.btnF4.Text = "【F4】手動送信";
+            this.btnF4.UseVisualStyleBackColor = true;
+            this.btnF4.Click += new System.EventHandler(this.btnF4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.button3.Location = new System.Drawing.Point(63, 125);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(114, 36);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "【F5】設定";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btnConfig_Click);
+            // 
+            // btnF3
+            // 
+            this.btnF3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnF3.Location = new System.Drawing.Point(63, 35);
+            this.btnF3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 3);
+            this.btnF3.Name = "btnF3";
+            this.btnF3.Size = new System.Drawing.Size(114, 36);
+            this.btnF3.TabIndex = 4;
+            this.btnF3.Text = "【F3】非表示";
+            this.btnF3.UseVisualStyleBackColor = true;
+            this.btnF3.Click += new System.EventHandler(this.btnF3_Click);
             // 
             // panel4
             // 
@@ -261,10 +266,10 @@
             this.panel4.Controls.Add(this.btnF1);
             this.panel4.Controls.Add(this.btnF2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(967, 63);
+            this.panel4.Location = new System.Drawing.Point(547, 33);
             this.panel4.Name = "panel4";
             this.tableLayoutPanel1.SetRowSpan(this.panel4, 3);
-            this.panel4.Size = new System.Drawing.Size(234, 114);
+            this.panel4.Size = new System.Drawing.Size(234, 129);
             this.panel4.TabIndex = 8;
             // 
             // label5
@@ -289,8 +294,10 @@
             // 
             // cbbHours
             // 
+            this.cbbHours.DropDownHeight = 360;
             this.cbbHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cbbHours.FormattingEnabled = true;
+            this.cbbHours.IntegralHeight = false;
             this.cbbHours.Location = new System.Drawing.Point(10, 9);
             this.cbbHours.Name = "cbbHours";
             this.cbbHours.Size = new System.Drawing.Size(60, 32);
@@ -298,8 +305,10 @@
             // 
             // cbbMinutes
             // 
+            this.cbbMinutes.DropDownHeight = 360;
             this.cbbMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.cbbMinutes.FormattingEnabled = true;
+            this.cbbMinutes.IntegralHeight = false;
             this.cbbMinutes.Location = new System.Drawing.Point(124, 9);
             this.cbbMinutes.Name = "cbbMinutes";
             this.cbbMinutes.Size = new System.Drawing.Size(60, 32);
@@ -353,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 729);
+            this.ClientSize = new System.Drawing.Size(844, 521);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -365,11 +374,11 @@
             this.Resize += new System.EventHandler(this.frmMain_Resize);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);

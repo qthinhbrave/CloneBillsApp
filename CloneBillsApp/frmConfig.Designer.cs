@@ -82,20 +82,20 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 261);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // browseJsonKey
             // 
-            this.browseJsonKey.Location = new System.Drawing.Point(313, 283);
+            this.browseJsonKey.Location = new System.Drawing.Point(313, 228);
             this.browseJsonKey.Name = "browseJsonKey";
             this.browseJsonKey.Size = new System.Drawing.Size(35, 23);
             this.browseJsonKey.TabIndex = 12;
@@ -110,7 +110,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtClientID);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(193, 203);
+            this.panel1.Location = new System.Drawing.Point(193, 148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(554, 34);
             this.panel1.TabIndex = 17;
@@ -140,12 +140,12 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(63, 123);
+            this.label1.Location = new System.Drawing.Point(63, 68);
             this.label1.Margin = new System.Windows.Forms.Padding(3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 34);
             this.label1.TabIndex = 7;
-            this.label1.Text = "コピー元のフォルダ";
+            this.label1.Text = "控え保存フォルダ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -154,7 +154,7 @@
             this.panel2.Controls.Add(this.browseSource);
             this.panel2.Controls.Add(this.txtSourcePath);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(193, 123);
+            this.panel2.Location = new System.Drawing.Point(193, 68);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(554, 34);
             this.panel2.TabIndex = 14;
@@ -183,7 +183,7 @@
             this.panel3.Controls.Add(this.browseDestination);
             this.panel3.Controls.Add(this.txtLocalPath);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(193, 163);
+            this.panel3.Location = new System.Drawing.Point(193, 108);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(554, 34);
             this.panel3.TabIndex = 15;
@@ -211,7 +211,7 @@
             // btnEsc
             // 
             this.btnEsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnEsc.Location = new System.Drawing.Point(63, 63);
+            this.btnEsc.Location = new System.Drawing.Point(63, 23);
             this.btnEsc.Name = "btnEsc";
             this.btnEsc.Size = new System.Drawing.Size(86, 34);
             this.btnEsc.TabIndex = 0;
@@ -222,11 +222,11 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnSave.Location = new System.Drawing.Point(193, 63);
+            this.btnSave.Location = new System.Drawing.Point(193, 23);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 34);
             this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "【12】保存";
+            this.btnSave.Text = "【F12】保存";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -239,12 +239,12 @@
             this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.SpringGreen;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.Window;
-            this.radioButton1.Location = new System.Drawing.Point(63, 163);
+            this.radioButton1.Location = new System.Drawing.Point(63, 108);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(124, 34);
             this.radioButton1.TabIndex = 18;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "コピー先のフォルダ";
+            this.radioButton1.Text = "ネットワークドライブ";
             this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
@@ -256,7 +256,7 @@
             this.radioButton2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.radioButton2.ForeColor = System.Drawing.SystemColors.Window;
-            this.radioButton2.Location = new System.Drawing.Point(63, 203);
+            this.radioButton2.Location = new System.Drawing.Point(63, 148);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(124, 34);
             this.radioButton2.TabIndex = 19;
@@ -271,7 +271,7 @@
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.txtClientSecret);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(193, 243);
+            this.panel4.Location = new System.Drawing.Point(193, 188);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(554, 34);
             this.panel4.TabIndex = 20;
@@ -296,9 +296,9 @@
             // 
             // rtbJsonKey
             // 
-            this.rtbJsonKey.Location = new System.Drawing.Point(193, 283);
+            this.rtbJsonKey.Location = new System.Drawing.Point(193, 228);
             this.rtbJsonKey.Name = "rtbJsonKey";
-            this.rtbJsonKey.Size = new System.Drawing.Size(114, 34);
+            this.rtbJsonKey.Size = new System.Drawing.Size(114, 30);
             this.rtbJsonKey.TabIndex = 0;
             this.rtbJsonKey.Text = "";
             this.rtbJsonKey.Visible = false;
@@ -311,7 +311,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 261);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
             this.MaximizeBox = false;
