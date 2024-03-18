@@ -24,7 +24,7 @@ namespace CloneBillsApp.Class.AppData
             obj = new clsHistoryUpload();
         }
 
-        public async void UploadFile(BackgroundWorker bgw)
+        public void UploadFile(BackgroundWorker bgw)
         {
             string fromLocation = sourceInfo.Path;
             string toLocation = "";
@@ -72,7 +72,7 @@ namespace CloneBillsApp.Class.AppData
                             }
                             if (!File.Exists(destFileName))
                             {
-                                TaskList.Add(LocalUpload(file, destFileName, this, bgw));
+                                TaskList.Add(LocalUpload(file, destFileName, bgw));
                             }
                         }
                         else if (googleInfo.IsActive)
@@ -81,13 +81,13 @@ namespace CloneBillsApp.Class.AppData
                             string subPath = Path.GetDirectoryName(file).Replace(sourceInfo.Path, "");
                             string fileName = Path.GetFileName(file);
                             string toPath = String.Format("{0}{1}", clsCommon.APP_NAME, subPath);
-                            clsLogger.Info("toPath: " + toPath);
+                            //clsLogger.Info("toPath: " + toPath);
                             folderId = _api.CreateDirectoryIfNotExist(toPath);
                             if (folderId != null && folderId != "")
                             {
                                 if (!_api.ExistsFile(folderId, fileName))
                                 {
-                                    TaskList.Add(GoogleUpload(_api, file, folderId, this, bgw));
+                                    TaskList.Add(GoogleUpload(_api, file, folderId, bgw));
                                 }
                             }
                         }
@@ -96,7 +96,12 @@ namespace CloneBillsApp.Class.AppData
                         //    TaskList.Add(obj.BOX_Upload(file));
                         //}
                     }
+
+                    //clsLogger.Info("Task.WhenAll。。。");
+                    //Task.WhenAll(TaskList.ToArray()).Wait();
+                    clsLogger.Info("Task.WaitAll。。。");
                     Task.WaitAll(TaskList.ToArray());
+                    clsLogger.Info("Task.Finished。");
                 }
             }
             catch(Exception ex)
@@ -123,9 +128,9 @@ namespace CloneBillsApp.Class.AppData
             }
         }
 
-        async static Task LocalUpload(string file, string destFileName, clsUpload upload, BackgroundWorker bgw)
+        private Task LocalUpload(string file, string destFileName, BackgroundWorker bgw)
         {
-            await Task.Run(() =>
+            return Task.Run(() =>
             {
                 try
                 {
@@ -135,23 +140,24 @@ namespace CloneBillsApp.Class.AppData
                     // Copy
                     File.Copy(file, destFileName, true);
 
-                    upload.Count++;
-                    upload.LogDetail(file, null);
+                    Count++;
+                    LogDetail(file, null);
                 }
                 catch(Exception ex)
                 {
                     clsLogger.Err(ex.Message);
-                    upload.LogDetail(file, ex);
+                    LogDetail(file, ex);
                 }
                 finally
                 {
+                    clsLogger.Info("Moved " + file);
                 }
             });
         }
 
-        async static Task GoogleUpload(clsGoogleApiSevice _api, string file, string folderId, clsUpload upload, BackgroundWorker bgw)
+        private Task GoogleUpload(clsGoogleApiSevice _api, string file, string folderId, BackgroundWorker bgw)
         {
-            await Task.Run(async() =>
+            return Task.Run(async() =>
             {
                 try
                 {
@@ -161,16 +167,17 @@ namespace CloneBillsApp.Class.AppData
                     // Copy
                     var fileId = await _api.UploadFileAsync(file, CancellationToken.None, folderId);
                     
-                    upload.Count++;
-                    upload.LogDetail(file, null);
+                    Count++;
+                    LogDetail(file, null);
                 }
                 catch (Exception ex)
                 {
                     clsLogger.Err(ex.Message);
-                    upload.LogDetail(file, ex);
+                    LogDetail(file, ex);
                 }
                 finally
                 {
+                    clsLogger.Info("Moved " + file);
                 }
             });
         }

@@ -41,13 +41,13 @@ namespace CloneBillsApp
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(KeyEvent);
 
             txtSourcePath.Text = clsSourceInfo.Path;
-            
-            radioButton1.Checked = clsLocalDestinationInfo.IsActive;
+
+            radioButton1.Checked = true;//clsLocalDestinationInfo.IsActive;
             txtLocalPath.Text = clsLocalDestinationInfo.Path;
 
-            radioButton2.Checked = clsGoogleInfo.IsActive;
+            /*radioButton2.Checked = clsGoogleInfo.IsActive;
             txtClientID.Text = clsGoogleInfo.ClientId;
-            txtClientSecret.Text = clsGoogleInfo.ClientSecret;
+            txtClientSecret.Text = clsGoogleInfo.ClientSecret;*/
         }
 
         /// <summary>

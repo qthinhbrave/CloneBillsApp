@@ -95,6 +95,12 @@ namespace CloneBillsApp
             localInfo = new clsLocalDestinationInfo();
             googleInfo = new clsGoogleInfo();
             LoadUploadPath();
+
+            // Check source-dest path is empty
+            /*if (String.IsNullOrEmpty(txtSourcePath.Text) || String.IsNullOrEmpty(txtDestinationInfo.Text))
+            {
+                btnConfig_Click(sender, e);
+            }*/
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)

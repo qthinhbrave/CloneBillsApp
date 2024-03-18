@@ -49,6 +49,7 @@
             this.txtClientSecret = new System.Windows.Forms.TextBox();
             this.rtbJsonKey = new System.Windows.Forms.RichTextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,6 +68,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.browseJsonKey, 3, 7);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 3);
@@ -74,7 +76,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.btnEsc, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.radioButton1, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.radioButton1, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.radioButton2, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 6);
             this.tableLayoutPanel1.Controls.Add(this.rtbJsonKey, 2, 7);
@@ -90,14 +92,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 261);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 177);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // browseJsonKey
             // 
             this.browseJsonKey.Location = new System.Drawing.Point(313, 228);
             this.browseJsonKey.Name = "browseJsonKey";
-            this.browseJsonKey.Size = new System.Drawing.Size(35, 23);
+            this.browseJsonKey.Size = new System.Drawing.Size(35, 1);
             this.browseJsonKey.TabIndex = 12;
             this.browseJsonKey.Text = "...";
             this.browseJsonKey.UseVisualStyleBackColor = true;
@@ -123,6 +125,7 @@
             this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "クライアントID:";
+            this.label2.Visible = false;
             // 
             // txtClientID
             // 
@@ -132,6 +135,7 @@
             this.txtClientID.ReadOnly = true;
             this.txtClientID.Size = new System.Drawing.Size(417, 20);
             this.txtClientID.TabIndex = 10;
+            this.txtClientID.Visible = false;
             // 
             // label1
             // 
@@ -239,13 +243,14 @@
             this.radioButton1.FlatAppearance.CheckedBackColor = System.Drawing.Color.SpringGreen;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.radioButton1.ForeColor = System.Drawing.SystemColors.Window;
-            this.radioButton1.Location = new System.Drawing.Point(63, 108);
+            this.radioButton1.Location = new System.Drawing.Point(63, 188);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(124, 34);
             this.radioButton1.TabIndex = 18;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "ネットワークドライブ";
             this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.Visible = false;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
@@ -263,6 +268,7 @@
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Googleドライブ";
             this.radioButton2.UseVisualStyleBackColor = false;
+            this.radioButton2.Visible = false;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // panel4
@@ -284,6 +290,7 @@
             this.label3.Size = new System.Drawing.Size(113, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "クライアントシークレット:";
+            this.label3.Visible = false;
             // 
             // txtClientSecret
             // 
@@ -293,12 +300,13 @@
             this.txtClientSecret.ReadOnly = true;
             this.txtClientSecret.Size = new System.Drawing.Size(417, 20);
             this.txtClientSecret.TabIndex = 11;
+            this.txtClientSecret.Visible = false;
             // 
             // rtbJsonKey
             // 
             this.rtbJsonKey.Location = new System.Drawing.Point(193, 228);
             this.rtbJsonKey.Name = "rtbJsonKey";
-            this.rtbJsonKey.Size = new System.Drawing.Size(114, 30);
+            this.rtbJsonKey.Size = new System.Drawing.Size(114, 1);
             this.rtbJsonKey.TabIndex = 0;
             this.rtbJsonKey.Text = "";
             this.rtbJsonKey.Visible = false;
@@ -307,11 +315,26 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(63, 108);
+            this.label4.Margin = new System.Windows.Forms.Padding(3);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 34);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "ネットワークドライブ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 261);
+            this.ClientSize = new System.Drawing.Size(800, 177);
             this.Controls.Add(this.tableLayoutPanel1);
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -356,5 +379,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtClientSecret;
+        private System.Windows.Forms.Label label4;
     }
 }
